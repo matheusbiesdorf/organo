@@ -13,14 +13,19 @@ const Formulario = () => {
         'Support'
     ]
 
+    const aoSalvar = (evento) => {
+        evento.preventDefault()
+        console.log('Form foi submetido')
+    }
+
     return (
         <section className="formulario">
-            <form>
+            <form onSubmit={aoSalvar}> 
                 <h2>Preencha os dados para criar o card do campeão</h2>
-                <CampoTexto label="Nome" placeholder="Digite o nome do campeão" />
-                <CampoTexto label="Classe" placeholder="Digite a classe do campeão" />
+                <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite o nome do campeão" />
+                <CampoTexto obrigatorio={true} label="Classe" placeholder="Digite a classe do campeão" />
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
-                <ListaSuspensa label="Time" itens={times}/>
+                <ListaSuspensa obrigatorio={true} label="Time" itens={times}/>
                 <Botao>
                     Criar Card 
                 </Botao>
