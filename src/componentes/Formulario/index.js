@@ -7,7 +7,6 @@ import { useState } from "react";
 const Formulario = (props) => {
     const times = ["Top", "Jungler", "Mid", "ADC", "Support"];
 
-    /* Hooks são os Setters */
     const [nome, setNome] = useState("");
     const [classe, setClasse] = useState("");
     const [imagem, setImagem] = useState("");
