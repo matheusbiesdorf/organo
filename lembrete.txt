@@ -1,1 +1,25 @@
 npm start
+
+ctrl + clique vai direto para o arquivo
+
+Ctrl Alt Cima/baixo => Seleciona várias linhas 
+Depois podemos colar cada linah em um local diferente
+
+CORES:
+
+TOP
+#E06B69
+#FDE7E8
+JG
+#57C278
+#D9F7E9
+MID
+#82CFFA
+#E8F8FF
+ADC
+#FFBA05
+#FFF5D9
+SUPORTE
+#DB6EBF
+#FAE9F5
+
