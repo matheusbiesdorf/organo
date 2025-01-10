@@ -1,15 +1,28 @@
-import './Time.css'
+import Campeao from "../Campeao";
+import "./Time.css";
 
 const Time = (props) => {
     const css = {
-        backgroundColor: props.corSecundaria
-    }
+        backgroundColor: props.corSecundaria,
+    };
 
-    return(
-        <section className='time' style={css}>
+    return (
+        (props.campeoes.length > 0) ?
+        <section className="time" style={css}>
             <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
-        </section>
-    )
-}
 
-export default Time
+            <div className="campeoes">
+                {props.campeoes.map((campeao) => (
+                    <Campeao
+                        key={campeao.nome}
+                        nome={campeao.nome}
+                        classe={campeao.classe}
+                        imagem={campeao.imagem}
+                    />
+                ))}
+            </div>
+        </section> : ''
+    );
+};
+
+export default Time;

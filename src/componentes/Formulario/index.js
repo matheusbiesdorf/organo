@@ -5,7 +5,6 @@ import "./Formulario.css";
 import { useState } from "react";
 
 const Formulario = (props) => {
-    const times = ["Top", "Jungler", "Mid", "ADC", "Support"];
 
     const [nome, setNome] = useState("");
     const [classe, setClasse] = useState("");
@@ -20,7 +19,11 @@ const Formulario = (props) => {
             imagem,
             time
         })
-    };
+        setNome('')
+        setClasse('')
+        setImagem('')
+        setTime('')
+    }
 
     return (
         <section className="formulario">
@@ -49,7 +52,7 @@ const Formulario = (props) => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Time"
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     aoAlterado={(valor) => setTime(valor)}
                 />

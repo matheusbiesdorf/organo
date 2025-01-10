@@ -35,7 +35,6 @@ function App() {
     const [campeoes, setCampeoes] = useState([]);
 
     const aoNovoCampeaoAdicionado = (campeao) => {
-        console.log(campeao);
         setCampeoes([...campeoes, campeao]);
     };
 
@@ -43,11 +42,21 @@ function App() {
         <div className="App">
             <Banner />
             <Formulario
-                aoCampeaoCadastrado={(campeao) =>
+                times={times.map(time => time.nome)}
+                aoCampeaoCadastrado={campeao =>
                     aoNovoCampeaoAdicionado(campeao)
                 }
             />
-            {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />)}
+            {times.map(time => 
+                <Time
+                    key={time.nome}
+                    nome={time.nome}
+                    corPrimaria={time.corPrimaria}
+                    corSecundaria={time.corSecundaria}
+                    campeoes={campeoes.filter(
+                        campeao => campeao.time === time.nome)}
+                />
+            )}
         </div>
     );
 }
