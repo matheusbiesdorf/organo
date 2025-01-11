@@ -4,3 +4,26 @@ ctrl + clique vai direto para o arquivo
 
 Ctrl Alt Cima/baixo => Seleciona várias linhas 
 Depois podemos colar cada linah em um local diferente
+
+
+Lembrar do uso do Fragment:
+
+import { Fragment } from 'React'
+
+return(
+    <Fragment>
+        <div></div>
+        <div></div>
+        ...
+    </Fragment>
+)
+
+OU 
+
+return(
+    <>
+        <div></div>
+        <div></div>
+        ...
+    </>
+)
