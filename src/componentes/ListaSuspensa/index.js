@@ -9,6 +9,7 @@ const ListaSuspensa = (props) => {
                 required={props.obrigatorio}
                 value={props.valor}
             >
+                <option value=""></option>
                 {props.itens.map((item) => {
                     return <option key={item}>{item}</option>; //Percorre a lista de nomes e retorna cada um em uma <option>
                     /* Usamos o próprio item (nome do time) como uma key */
